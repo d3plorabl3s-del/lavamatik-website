@@ -140,24 +140,18 @@ export default function Home() {
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 10,
-          width: '120px',
-          height: '120px',
+          width: '140px',
+          height: '140px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, #667eea, #764ba2)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: '0 10px 30px rgba(102, 126, 234, 0.4)',
+          overflow: 'hidden',
+          boxShadow: '0 15px 40px rgba(102, 126, 234, 0.5)',
           border: '3px solid rgba(255, 255, 255, 0.2)'
         }}>
-          <div style={{
-            textAlign: 'center',
-            color: 'white',
-            fontSize: '28px',
-            fontWeight: 'bold'
-          }}>
-            🧺
-          </div>
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663631426047/ehiPopnu9JFvqKXzFB4o6M/lavamatik_logo_3d-fZ5pcrjnritvKL5rioqGpX.webp" alt="LAVAMATIK Logo" style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }} />
         </div>
 
         {/* Hero Content */}
