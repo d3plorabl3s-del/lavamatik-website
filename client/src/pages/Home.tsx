@@ -18,14 +18,15 @@ export default function Home() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '24px',
           cursor: 'pointer',
           background: '#25D366',
           color: 'white',
           textDecoration: 'none',
           boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
           transition: 'all 0.3s'
-        }} title="WhatsApp">💬</a>
+        }} title="WhatsApp">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a6.963 6.963 0 00-6.954 6.954c0 1.928.749 3.74 2.105 5.096a6.966 6.966 0 005.849 2.409h.004a6.967 6.967 0 006.954-6.954c0-1.928-.749-3.74-2.105-5.096a6.966 6.966 0 00-5.849-2.409m5.009 12.449h-.004a5.966 5.966 0 01-5.009 2.414c-3.304 0-5.983-2.679-5.983-5.983 0-1.577.613-3.061 1.727-4.175 1.114-1.114 2.598-1.727 4.175-1.727 3.304 0 5.984 2.679 5.984 5.983 0 1.577-.613 3.061-1.727 4.175-1.114 1.114-2.598 1.727-4.175 1.727M6.5 2a4.5 4.5 0 100 9 4.5 4.5 0 000-9m0 8a3.5 3.5 0 110 -7 3.5 3.5 0 010 7m11-13a1 1 0 11-2 0 1 1 0 012 0z"/></svg>
+        </a>
         <a href="https://instagram.com" style={{
           width: '50px',
           height: '50px',
@@ -33,14 +34,15 @@ export default function Home() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '24px',
           cursor: 'pointer',
           background: '#E4405F',
           color: 'white',
           textDecoration: 'none',
           boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
           transition: 'all 0.3s'
-        }} title="Instagram">📷</a>
+        }} title="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 110-2.881 1.44 1.44 0 010 2.881z"/></svg>
+        </a>
         <a href="https://facebook.com" style={{
           width: '50px',
           height: '50px',
@@ -48,14 +50,15 @@ export default function Home() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '24px',
           cursor: 'pointer',
           background: '#1877F2',
           color: 'white',
           textDecoration: 'none',
           boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
           transition: 'all 0.3s'
-        }} title="Facebook">f</a>
+        }} title="Facebook">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
         <a href="tel:+573003865302" style={{
           width: '50px',
           height: '50px',
@@ -63,14 +66,15 @@ export default function Home() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          fontSize: '24px',
           cursor: 'pointer',
           background: '#FF6B6B',
           color: 'white',
           textDecoration: 'none',
           boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
           transition: 'all 0.3s'
-        }} title="Llamar">☎️</a>
+        }} title="Llamar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.92 7.02C17.45 6.18 16.7 5.95 15.92 6.82c-.74.9-.74 2.26 0 3.16.6.73 1.35.97 2.12.1l.99-1.06c.25-.27.25-.72 0-.99l-.99-1.07zM14.1 4.1c-.82-.82-2.14-.82-2.96 0L9.24 6.82c-.82.82-.82 2.14 0 2.96l1.9 1.9c.82.82 2.14.82 2.96 0l2.66-2.66c.82-.82.82-2.14 0-2.96L14.1 4.1zM19.02 14.1c.9-.74 2.26-.74 3.16 0 .87.77.64 1.52-.1 2.12l-1.06.99c-.27.25-.72.25-.99 0l-1.07-.99c.9-.74.9-2.26.16-3.12zm-6.92 6.88c-.82.82-.82 2.14 0 2.96l2.66 2.66c.82.82 2.14.82 2.96 0l1.9-1.9c.82-.82.82-2.14 0-2.96l-2.66-2.66c-.82-.82-2.14-.82-2.96 0l-1.9 1.9z"/></svg>
+        </a>
       </div>
 
       {/* Header - Night Theme */}
@@ -372,12 +376,12 @@ export default function Home() {
           gap: '20px'
         }}>
           {[
-            '/manus-storage/hero_washer_b76a3984.png',
-            '/manus-storage/paisa_character_bd08af45.png',
-            '/manus-storage/delivery_icon_bffc139d.png',
-            '/manus-storage/services_banner_682262eb.png',
-            '/manus-storage/gallery_bg_fc2b2213.png',
-            '/manus-storage/hero_main_b62c50ca.png'
+            '/manus-storage/hCErVnsdIybF_9a417798.jpg',
+            '/manus-storage/Ec15yJmaclGr_81475ec3.jpg',
+            '/manus-storage/IffkE9WlUDoV_b91fa561.jpg',
+            '/manus-storage/m4bzCtIJ2hGl_5d101df5.jpg',
+            '/manus-storage/wmyoMQjlIWPg_9b6052ed.jpg',
+            '/manus-storage/lW0xvPofLqlP_94f1f090.jpg'
           ].map((img, idx) => (
             <div key={idx} style={{
               borderRadius: '15px',
