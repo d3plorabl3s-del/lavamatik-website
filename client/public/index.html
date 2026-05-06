@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVAMATIK El Paisa - Alquiler de Lavadoras</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .floating-icons {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp { background: #25D366; color: white; }
+        .instagram { background: #E4405F; color: white; }
+        .facebook { background: #1877F2; color: white; }
+        .phone { background: #FF6B6B; color: white; }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .phone-number {
+            background: #25D366;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cta-button:hover {
+            background: #20ba58;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Services Section with Parallax */
+        .services-section {
+            position: relative;
+            margin: 50px 0;
+            padding: 60px 20px;
+            overflow: hidden;
+        }
+
+        .services-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('services_banner.png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1;
+            opacity: 0.25;
+        }
+
+        .services {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .service-card .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #25D366;
+            margin: 15px 0;
+        }
+
+        .service-card .description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba58;
+            transform: scale(1.05);
+        }
+
+        .reviews {
+            background: white;
+            padding: 50px 20px;
+            margin: 50px 0;
+        }
+
+        .reviews-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reviews h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .review-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-card .stars {
+            color: #FFD700;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .review-card .text {
+            margin-bottom: 15px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .review-card .author {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .gallery {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        .footer-link {
+            color: #25D366;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 28px;
+            }
+
+            .services h2, .reviews h2, .gallery h2 {
+                font-size: 24px;
+            }
+
+            .floating-icons {
+                right: 10px;
+                bottom: 10px;
+                gap: 10px;
+            }
+
+            .social-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .services-bg {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Social Icons -->
+    <div class="floating-icons">
+        <a href="https://wa.me/573003865302" class="social-icon whatsapp" title="WhatsApp">💬</a>
+        <a href="https://instagram.com" class="social-icon instagram" title="Instagram">📷</a>
+        <a href="https://facebook.com" class="social-icon facebook" title="Facebook">f</a>
+        <a href="tel:+573003865302" class="social-icon phone" title="Llamar">☎️</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo">🌈 LAVAMATIK El Paisa</div>
+            <div class="phone-number">📞 300-386-5302</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Limpieza Cósmica ✨</h1>
+                <p>Alquila nuestras lavadoras grandes de última generación en toda el área de Fusagasugá</p>
+                <p style="font-size: 16px; opacity: 0.9;">Servicio rápido, confiable y a domicilio</p>
+                <a href="https://wa.me/573003865302?text=Hola%20LAVAMATIK%2C%20quiero%20agendar%20una%20lavadora" class="cta-button">Agendar Ahora por WhatsApp</a>
+            </div>
+            <div class="hero-image">
+                <img src="hero_main.png" alt="LAVAMATIK El Paisa">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Parallax Background -->
+    <section class="services-section">
+        <div class="services-bg"></div>
+        <div class="services">
+            <h2>🧺 Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>3 Horas</h3>
+                    <div class="price">$10.000</div>
+                    <div class="description">Lavadora Grande - Tiempo limitado</div>
+                    <a href="https://wa.me/573003865302?text=Quiero%20agendar%203%20horas%20de%20lavadora" class="whatsapp-btn">Agendar</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>5 Horas</h3>
+                    <div class="price">$15.000</div>
+                    <div class="description">Lavadora Grande - Media jornada</div>
+                    <a href="https://wa.me/573003865302?text=Quiero%20agendar%205%20horas%20de%20lavadora" class="whatsapp-btn">Agendar</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Noche Entera</h3>
+                    <div class="price">$15.000</div>
+                    <div class="description">Lavadora Grande - Servicio nocturno</div>
+                    <a href="https://wa.me/573003865302?text=Quiero%20agendar%20noche%20entera" class="whatsapp-btn">Agendar</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>24 Horas</h3>
+                    <div class="price">$24.000</div>
+                    <div class="description">Lavadora Grande - Un día completo</div>
+                    <a href="https://wa.me/573003865302?text=Quiero%20agendar%2024%20horas" class="whatsapp-btn">Agendar</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>Fin de Semana</h3>
+                    <div class="price">$24.000</div>
+                    <div class="description">Lavadora Grande - Sábado y domingo</div>
+                    <a href="https://wa.me/573003865302?text=Quiero%20agendar%20fin%20de%20semana%20completo" class="whatsapp-btn">Agendar</a>
+                </div>
+
+                <div class="service-card">
+                    <h3>🚚 Entrega a Domicilio</h3>
+                    <div class="price">GRATIS</div>
+                    <div class="description">En toda el área de Fusagasugá</div>
+                    <a href="https://wa.me/573003865302?text=Necesito%20entrega%20a%20domicilio" class="whatsapp-btn">Solicitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="reviews-content">
+            <h2>⭐ Lo Que Dicen Nuestros Clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="text">"Excelente servicio, muy rápido y confiable. Las lavadoras están en perfecto estado. ¡Recomendado!"</div>
+                    <div class="author">- María García, Fusagasugá</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="text">"El mejor servicio de alquiler en la ciudad. Atención al cliente de primera. Volveré pronto."</div>
+                    <div class="author">- Juan Rodríguez, Fusagasugá</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="text">"Muy buena experiencia. Entrega rápida y el personal muy amable. Precio justo."</div>
+                    <div class="author">- Carmen López, Fusagasugá</div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <div class="text">"Lavadoras de excelente calidad. El servicio a domicilio es muy conveniente. ¡Muchas gracias!"</div>
+                    <div class="author">- Pedro Martínez, Fusagasugá</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>📸 Galería de Clientes</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="hero_washer.png" alt="Lavadora LAVAMATIK">
+            </div>
+            <div class="gallery-item">
+                <img src="paisa_character.png" alt="El Paisa LAVAMATIK">
+            </div>
+            <div class="gallery-item">
+                <img src="delivery_icon.png" alt="Entrega a Domicilio">
+            </div>
+            <div class="gallery-item">
+                <img src="services_banner.png" alt="Servicios LAVAMATIK">
+            </div>
+            <div class="gallery-item">
+                <img src="gallery_bg.png" alt="Comunidad Fusagasugá">
+            </div>
+            <div class="gallery-item">
+                <img src="hero_main.png" alt="LAVAMATIK El Paisa">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>🌈 LAVAMATIK El Paisa</strong></p>
+        <p>Alquiler de Lavadoras Grandes en Fusagasugá</p>
+        <p>📞 Teléfono: <a href="tel:+573003865302" class="footer-link">300-386-5302</a></p>
+        <p>💬 WhatsApp: <a href="https://wa.me/573003865302" class="footer-link">Enviar Mensaje</a></p>
+        <p>📍 Servicio en toda el área de Fusagasugá</p>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">© 2026 LAVAMATIK El Paisa - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
