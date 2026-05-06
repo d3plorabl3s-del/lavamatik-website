@@ -174,7 +174,8 @@ export default function Home() {
             marginBottom: '20px',
             textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
             letterSpacing: '-1px'
-          }}>Limpieza Cósmica ✨</h1>
+          }}>ALQUILER LAVADORAS LAVAMATIKS
+EL PAISA</h1>
           <p style={{
             fontSize: '20px',
             marginBottom: '20px',
