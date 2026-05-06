@@ -174,7 +174,7 @@ export default function Home() {
             marginBottom: '20px',
             textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
             letterSpacing: '-1px'
-          }}>ALQUILER LAVADORAS LAVAMATIKS
+          }}>ALQUILER LAVADORAS LAVAMATIK
 EL PAISA</h1>
           <p style={{
             fontSize: '20px',
