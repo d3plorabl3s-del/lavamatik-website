@@ -1,0 +1,28 @@
+Uploading file (webdev private): hero_main.png (size: 5861843 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/hero_main_b62c50ca.png
+Uploading file (webdev private): hero_washer.png (size: 2414671 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/hero_washer_b76a3984.png
+Uploading file (webdev private): paisa_character.png (size: 2928869 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/paisa_character_bd08af45.png
+Uploading file (webdev private): delivery_icon.png (size: 1769860 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/delivery_icon_bffc139d.png
+Uploading file (webdev private): services_banner.png (size: 2460373 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/services_banner_682262eb.png
+Uploading file (webdev private): gallery_bg.png (size: 5172895 bytes)
+File uploaded successfully!
+Storage Path: /manus-storage/gallery_bg_fc2b2213.png
+
+========== Upload Summary ==========
+[SUCCESS] hero_main.png -> /manus-storage/hero_main_b62c50ca.png
+[SUCCESS] hero_washer.png -> /manus-storage/hero_washer_b76a3984.png
+[SUCCESS] paisa_character.png -> /manus-storage/paisa_character_bd08af45.png
+[SUCCESS] delivery_icon.png -> /manus-storage/delivery_icon_bffc139d.png
+[SUCCESS] services_banner.png -> /manus-storage/services_banner_682262eb.png
+[SUCCESS] gallery_bg.png -> /manus-storage/gallery_bg_fc2b2213.png
+=====================================
+Total: 6, Success: 6, Failed: 0
