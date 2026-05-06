@@ -140,12 +140,12 @@ export default function Home() {
         {/* Circular Logo */}
         <div style={{
           position: 'absolute',
-          top: '50px',
+          top: '30px',
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 10,
-          width: '140px',
-          height: '140px',
+          width: '120px',
+          height: '120px',
           borderRadius: '50%',
           overflow: 'hidden',
           boxShadow: '0 15px 40px rgba(102, 126, 234, 0.5)',
@@ -166,7 +166,7 @@ export default function Home() {
           color: 'white',
           maxWidth: '600px',
           padding: '0 20px',
-          marginTop: '80px'
+          marginTop: '160px'
         }}>
           <h1 style={{
             fontSize: '48px',
