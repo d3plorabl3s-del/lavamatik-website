@@ -206,7 +206,7 @@ EL PAISA</h1>
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663631426047/ehiPopnu9JFvqKXzFB4o6M/delivery_icon-3CvQKLMKXdHRkfXCCPSZWH.webp)',
+          backgroundImage: 'url(/manus-storage/delivery_icon_7b1c2de8.png)',
           backgroundAttachment: 'fixed',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
