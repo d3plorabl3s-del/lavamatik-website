@@ -169,7 +169,7 @@ export default function Home() {
           marginTop: '80px'
         }}>
           <h1 style={{
-            fontSize: '56px',
+            fontSize: '48px',
             fontWeight: '800',
             marginBottom: '20px',
             textShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
